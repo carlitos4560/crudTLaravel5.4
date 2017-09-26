@@ -19,10 +19,10 @@ class CreateVentasTable extends Migration
             $table->string('descripcion');
             
             $table->integer('id_cliente')->unsigned();
-            $table->foreign('id_cliente')->references('id')->on('clientes');
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
             
             $table->integer('id_producto')->unsigned();
-            $table->foreign('id_producto')->references('id')->on('productos');
+            $table->foreign('id_producto')->references('id')->on('productos')->onDelete('cascade');
             
             $table->timestamps();
         });

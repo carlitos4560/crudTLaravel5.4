@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('clientes','ClienteController');
+Route::resource('productos','ProductoController');
+Route::resource('ventas','VentaController');
